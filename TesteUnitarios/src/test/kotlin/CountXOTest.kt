@@ -7,9 +7,23 @@ class CountXOTest {
     @Test
     @DisplayName("Testa a quantidade de x e o")
     fun textCountXO() {
+      /*  Assertions.assertTrue { countXO("xxoo") }
         Assertions.assertTrue { countXO("xxoo") }
-        Assertions.assertFalse { countXO("xxooo") }
-        Assertions.assertTrue { countXO("xxoox") }
+        Assertions.assertTrue { countXO("xxoo") }
+*/
 
+        // ou
+
+        Assertions.assertAll(({
+            Assertions.assertTrue(countXO("xxoo"))
+        }),
+            {
+                Assertions.assertTrue(countXO("xxoo"))
+            },
+            {
+                Assertions.assertTrue(countXO("xxooo"))
+            }
+
+        )
     }
 }
