@@ -1,8 +1,16 @@
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
 class CountXOTest {
+
+
+    @Test
+    @Disabled
+    fun teste02(){
+        //TODO para implementar ainda.
+    }
 
     @Test
     @DisplayName("Testa a quantidade de x e o")
