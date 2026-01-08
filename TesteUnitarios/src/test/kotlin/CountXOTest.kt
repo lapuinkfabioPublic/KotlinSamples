@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Assumptions
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -33,5 +34,12 @@ class CountXOTest {
             }
 
         )
+    }
+
+    @Test
+    @DisplayName("Testa a quantidade de z e y")
+    fun rodaBaseadoEmCondicao(){
+        Assumptions.assumeTrue(countXO("xxoo"))
+        Assertions.assertEquals(true, countXO("xxoo0"))
     }
 }
