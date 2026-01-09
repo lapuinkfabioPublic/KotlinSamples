@@ -20,11 +20,21 @@ class PortariaTest  {
     }
 
     @Test
+    @DisplayName("Negar a entrada para convites comum")
+    fun validaTipoDeConviteComum(){
+        Assertions.assertEquals(portaria(25,"comum", "xx888"),conviteInvalido)
+    }
+
+    @Test
     @DisplayName("Negar a entrada para convites inválidos")
-    fun validaTipoDeConvite(){
-        Assertions.assertEquals(portaria(18,"comum", "xl2"),conviteInvalido)
-        Assertions.assertEquals(portaria(10,"dd", "xl2"),conviteInvalido)
-        Assertions.assertEquals(portaria(20,"dd", "xl2"),conviteInvalido)
+    fun validaTipoDeConviteLuxo(){
+        Assertions.assertEquals(portaria(25,"luxo", "xx888"),conviteInvalido)
+    }
+
+    @Test
+    @DisplayName("Negar a entrada para convites inválidos")
+    fun validaTipoDeConvitePremium(){
+        Assertions.assertEquals(portaria(25,"premium", "xx888"),conviteInvalido)
     }
 
     @Test
