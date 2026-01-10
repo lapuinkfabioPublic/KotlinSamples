@@ -17,6 +17,7 @@ class PortariaTest  {
         Assertions.assertEquals(portaria(18,"comum", "xt0001"), bemvindo)
         Assertions.assertEquals(portaria(10,"comum", "xt0002"), bemvindo)
         Assertions.assertEquals(portaria(20,"comum", "xt0003"), bemvindo)
+        Assertions.assertEquals(portaria(20,"comum", "xl0004"), bemvindo)
     }
 
     @Test
@@ -37,12 +38,24 @@ class PortariaTest  {
         Assertions.assertEquals(portaria(25,"premium", "xx888"),conviteInvalido)
     }
 
+
+    @Test
+    @DisplayName("Negar a entrada para convites inválidos")
+    fun validaTipoDeConviteInvalido(){
+        Assertions.assertEquals(portaria(25,"none", "xx888"),conviteInvalido)
+    }
+
     @Test
     @DisplayName("Testa a idade das portarias")
     fun portaThrow(){
         Assumptions.assumeTrue(portaria(100,"comum", "xt0001") == bemvindo )
         Assumptions.assumeTrue(portaria(18,"comum", "xt0001") == bemvindo)
         Assumptions.assumeTrue(portaria(20,"comum", "xt0001") == bemvindo)
+
+        Assumptions.assumeTrue(portaria(100,"comum", "xl0001") == bemvindo )
+        Assumptions.assumeTrue(portaria(18,"comum", "xl0001") == bemvindo)
+        Assumptions.assumeTrue(portaria(20,"comum", "xl0001") == bemvindo)
+
 
         Assertions.assertEquals(portaria(100,"comum", "xt0001") , bemvindo)
         Assertions.assertEquals(portaria(18,"comum", "xt0001") , bemvindo)
