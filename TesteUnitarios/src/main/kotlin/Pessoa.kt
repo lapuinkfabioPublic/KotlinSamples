@@ -4,13 +4,14 @@ class Pessoa2 private constructor(){ //este construtor privado não deixa
     //a classe se instanciada/
 }
 
-class PessoaFisica(val nome: String, val anoNascimento: Int) {
+class PessoaFisica(val nome: String, val anoNascimento: Int, val doc :  String = "") {
 
-    constructor(nome:String, anoNascimento: Int, doc: String) : this(nome,anoNascimento)
-    var lastmsg = ""
-    var lastmsg = ""
+    //constructor(nome:String, anoNascimento: Int, doc: String) : this(nome,anoNascimento)
+   // var lastmsg = ""
+   //var lastmsg = ""
+  // var lastmsg = ""
     fun Salvar() {
-        lastmsg = "Salvar"
+      //  lastmsg = "Salvar"
     }
     fun dormir(){
 
@@ -24,14 +25,15 @@ fun main() {
    // var Pessoa2 = Pessoa2()
 
     var p = PessoaFisica("fabio", 1980)
+    var p2 = PessoaFisica("fabio", 1980, doc = "7777")
     println(p.nome)
     println(p.anoNascimento)
-    println(p.lastmsg)
+    println(p.doc)
     p.Salvar()
 
     var a:Int = 10
     println(Int.MAX_VALUE)
 
-    println(p.lastmsg)
+   // println(p.lastmsg)
 
 }
