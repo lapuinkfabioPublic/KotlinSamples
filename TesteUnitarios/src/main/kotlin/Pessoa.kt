@@ -4,9 +4,14 @@ class Pessoa2 private constructor(){ //este construtor privado não deixa
     //a classe se instanciada/
 }
 
-class PessoaFisica(val nome: String, val anoNascimento: Int, val doc :  String = "") {
+class PessoaFisica(val nome: String, val anoNascimento: Int) {
 
-    //constructor(nome:String, anoNascimento: Int, doc: String) : this(nome,anoNascimento)
+    constructor(nome:String, anoNascimento: Int, doc: String) : this(nome,anoNascimento)
+    {
+        if(doc == ""){
+          throw IllegalArgumentException("documento vazio")
+        }
+    }
    // var lastmsg = ""
    //var lastmsg = ""
   // var lastmsg = ""
@@ -28,7 +33,7 @@ fun main() {
     var p2 = PessoaFisica("fabio", 1980, doc = "7777")
     println(p.nome)
     println(p.anoNascimento)
-    println(p.doc)
+   // println(p.doc)
     p.Salvar()
 
     var a:Int = 10
