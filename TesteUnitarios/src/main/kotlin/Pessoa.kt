@@ -6,10 +6,12 @@ class Pessoa2 private constructor(){ //este construtor privado não deixa
 
 class PessoaFisica(val nome: String, val anoNascimento: Int) {
 
+    var doc : String? = null
+
     constructor(nome:String, anoNascimento: Int, doc: String) : this(nome,anoNascimento)
     {
         if(doc == ""){
-          throw IllegalArgumentException("documento vazio")
+          this.doc= "(none)"
         }
     }
    // var lastmsg = ""
@@ -19,6 +21,10 @@ class PessoaFisica(val nome: String, val anoNascimento: Int) {
       //  lastmsg = "Salvar"
     }
     fun dormir(){
+
+    }
+
+    fun acordar(){
 
     }
 
@@ -33,7 +39,7 @@ fun main() {
     var p2 = PessoaFisica("fabio", 1980, doc = "7777")
     println(p.nome)
     println(p.anoNascimento)
-   // println(p.doc)
+    println(p.doc)
     p.Salvar()
 
     var a:Int = 10
