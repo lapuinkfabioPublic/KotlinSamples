@@ -1,3 +1,26 @@
+class Animal ()
+{
+    var nome: String = ""
+        get() {
+
+            return field
+        }
+
+
+    fun CalculaBonus(cargo: Cargo): Float{
+        return if (cargo ==  Cargo.DIRETOR){
+            5000F
+        }
+        else if(cargo==Cargo.GERENTE){
+            3000F
+        }
+        else
+        {
+            2000F
+        }
+    }
+}
+
 fun endereco(rua :String, cidade :String, estado : String,
              cep: String = "")
 {
@@ -5,7 +28,9 @@ fun endereco(rua :String, cidade :String, estado : String,
 
 }
 /*
-fun abc(): Nothing
+
+/
+fun abc(): Nothing/
 {
     //TODO para fazer
 }
@@ -26,8 +51,13 @@ fun media(vararg valores: Any): Float
 }
 
 fun main(){
-    println("A média é:%f".format(media(8F, 10F, 5f, 5f)))
-    println("A média é:%f".format(media(1, 2, 3, 4)))
+
+    val animal = Animal()
+    println(animal.CalculaBonus(Cargo.GERENTE))
+
+
+//    println("A média é:%f".format(media(8F, 10F, 5f, 5f)))
+  //  println("A média é:%f".format(media(1, 2, 3, 4)))
 
     /*endereco("", "", estado = "")
 
