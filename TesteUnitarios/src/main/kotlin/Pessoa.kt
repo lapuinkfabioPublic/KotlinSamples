@@ -36,7 +36,7 @@ class PessoaFisica(var nome: String, var anoNascimento: Int) {
    // var lastmsg = ""
    //var lastmsg = ""
   // var lastmsg = ""
-    fun Salvar() {
+    fun salvar() {
       //  lastmsg = "Salvar"
     }
     fun dormir(){
@@ -59,7 +59,7 @@ fun main() {
     println(p.nome)
     println(p.anoNascimento)
     println(p.doc)
-    p.Salvar()
+    p.salvar()
 
     var a:Int = 10
     println(Int.MAX_VALUE)

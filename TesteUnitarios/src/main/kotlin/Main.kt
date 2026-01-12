@@ -1,5 +1,7 @@
+
 class Animal ()
 {
+
     var nome: String = ""
         get() {
 
@@ -50,7 +52,7 @@ fun media(vararg valores: Any): Float
     return soma / valores.size
 }
 
-fun main(){
+fun main2(){
 
     val animal = Animal()
     println(animal.CalculaBonus(Cargo.GERENTE))
@@ -62,4 +64,28 @@ fun main(){
     /*endereco("", "", estado = "")
 
     "".equals("",false)*/
+}
+
+class Database(){
+
+    fun openConnection(){
+        println("Conexão Estabelecida")
+    }
+}
+class Server{
+    lateinit var db: Database
+    fun initServer(){
+
+        if(!::db.isInitialized){ //se a variavel db não está inicializada
+            db = Database()
+        }
+
+        db.openConnection()
+    }
+
+}
+
+fun main(){
+    val server = Server()
+
 }

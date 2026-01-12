@@ -13,16 +13,24 @@ fun main(){
         println(p)
     }
 
-    val pessoa2: PessoaFisica = PessoaFisica("fabio",1980)
-    with(pessoa2){
-        this.nome = "fabio2"
-        this.doc = "1999"
-        this.anoNascimento= 1981
+    var p: PessoaFisica = PessoaFisica("fabio",1980)
+
+
+    with(p){
+        acordar()
+        dormir()
+        salvar()
 
     }
+    p.apply {
 
-    println(pessoa2.nome)
-    println(pessoa2.doc)
-    println(pessoa2.anoNascimento)
+        nome = "fabio v1"
+        anoNascimento = 1980
+        doc = "v1v2v3"
+    }
+
+    println(p.nome)
+    println(p.doc)
+    println(p.anoNascimento)
 
 }
