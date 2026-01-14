@@ -1,8 +1,8 @@
 
-class Animal ()
+open class Animal(nome1: String)
 {
 
-    var nome: String = ""
+    open var nome: String = ""
         get() {
 
             return field
@@ -54,7 +54,7 @@ fun media(vararg valores: Any): Float
 
 fun main2(){
 
-    val animal = Animal()
+    val animal = Animal(nome)
     println(animal.CalculaBonus(Cargo.GERENTE))
 
 
