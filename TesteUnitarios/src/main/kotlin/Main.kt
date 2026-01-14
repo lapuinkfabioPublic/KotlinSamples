@@ -54,8 +54,8 @@ fun media(vararg valores: Any): Float
 
 fun main2(){
 
-    val animal = Animal(nome)
-    println(animal.CalculaBonus(Cargo.GERENTE))
+    //val animal = Animal(nome)
+   // println(animal.CalculaBonus(Cargo.GERENTE))
 
 
 //    println("A média é:%f".format(media(8F, 10F, 5f, 5f)))

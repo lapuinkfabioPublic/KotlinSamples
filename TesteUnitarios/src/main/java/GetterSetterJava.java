@@ -27,7 +27,7 @@ public class GetterSetterJava {
     //utilidade vamos dizer assim.
     public static void main(String[] args) {
 
-        Animal animal = new Animal(nome);
+        Animal animal = new Animal("cat");
         animal.setNome("cat 2");
         System.out.println(animal.getNome());
 
