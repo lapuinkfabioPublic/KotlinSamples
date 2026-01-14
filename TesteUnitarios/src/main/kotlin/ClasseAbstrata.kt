@@ -31,17 +31,17 @@ open class Funcionario2
 }
 
 
-abstract class Funcionario(){
+fun interface  Funcionario{
     abstract  fun calculaBonus(): Float
 }
-class Gerente: Funcionario()
+class Gerente: Funcionario
 {
     override  fun calculaBonus(): Float {
         return 10F
     }
 
 }
-class Analista: Funcionario() {
+class Analista: Funcionario {
     override fun calculaBonus(): Float {
         return 10F
     }
@@ -54,6 +54,13 @@ fun imprimeValorBonus(funcionario: Funcionario){
 fun main(){
     imprimeValorBonus(Gerente())
     imprimeValorBonus(Analista())
+    imprimeValorBonus {
+        println("abc")//implementacao de u
+        println("abcd")
+        println("abcdef")
+        println("h")
+        10F
+    }
 }
 
 fun main22(){
@@ -61,3 +68,4 @@ fun main22(){
     cat.emitirSom()
     cat.Raiva()
 }
+//SAM Single Abstract Method
