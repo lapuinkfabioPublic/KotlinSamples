@@ -32,33 +32,34 @@ open class Funcionario2
 
 
 fun interface  Funcionario{
-    abstract  fun calculaBonus(str :String): Float
+    abstract  fun calculaBonus(str :String, id: Int): Float
 }
 class Gerente: Funcionario
 {
-    override  fun calculaBonus(str : String): Float {
+    override  fun calculaBonus(str : String, id: Int): Float {
         return 10F
     }
 
 }
 class Analista: Funcionario {
-    override fun calculaBonus(str : String): Float {
+    override fun calculaBonus(str : String, id: Int): Float {
         return 10F
     }
 }
 fun imprimeValorBonus(funcionario: Funcionario){
-    println(funcionario.calculaBonus("abc"))
+    println(funcionario.calculaBonus("abc", 10))
 }
 
 
 fun main(){
     imprimeValorBonus(Gerente())
     imprimeValorBonus(Analista())
-    imprimeValorBonus { str ->
+    imprimeValorBonus { str , _ -> // uso underline para dizer que o parametro não é usado
         println("abc ${str}")//implementacao de u
         println("abcd ${str}")
         println("abcdef ${str}")
         println("h ${str}")
+
         10F
     }
 }
